@@ -5,8 +5,7 @@ An end-to-end real-time data engineering pipeline that orchestrates data ingesti
 ---
 
 ## System Architecture
-https://github.com/ahemd1/Streaming_pipeline/blob/main/System%20Architecture.png
-![System Architecture](https://github.com/ahemd1/Streaming_pipeline/blob/main/System%20Architecture.png)
+![system Architecture](https://github.com/ahemd1/Streaming_pipeline/blob/main/System%20Architecture1.png)
 
 The pipeline is engineered with a modern, decoupled architecture ensuring fault tolerance and high availability:
 
