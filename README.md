@@ -4,7 +4,6 @@ An end-to-end real-time data engineering pipeline that orchestrates data ingesti
 
 ---
 
-```markdown
 ## Project Structure
 
 ```text
