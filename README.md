@@ -32,7 +32,7 @@ The pipeline is engineered with a modern, decoupled architecture ensuring fault 
 
 ## Key Technical Features
 
-* **ZooKeeperless Kafka**: Implemented modern cluster coordination via KRaft (`KAFKA_PROCESS_ROLES: 'broker,controller'`), reducing metadata synchronization overhead and infrastructure complexity.
+* **Native KRaft Consensus**: Implemented modern Kafka cluster coordination utilizing KRaft (KAFKA_PROCESS_ROLES: 'broker,controller'). This unifies broker and controller roles, drastically minimizing metadata synchronization overhead and infrastructure footprint.
 * **Graceful Orchestration**: Utilized Airflow health checks (`service_healthy` conditions) to guarantee that core streaming services are fully operational before initiating ingestion DAGs.
 * **Structured Real-Time Processing**: Leveraged PySpark's `readStream` and `writeStream` to parse incoming Kafka byte payloads into strongly-typed dataframes on the fly.
 
@@ -50,5 +50,5 @@ Ensure you have the following installed on your host machine:
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/ahemd1/Streaming_pipeline.git](https://github.com/ahemd1/Streaming_pipeline.git)
-   cd Streaming_pipeline
+git clone https://github.com/ahemd1/Streaming_pipeline.git
+cd Streaming_pipeline
