@@ -1,6 +1,6 @@
 # Realtime Data Streaming | End-to-End Data Engineering Project
 
-An end-to-end real-time data engineering pipeline that orchestrates data ingestion, processing, and distributed storage. This architecture leverages Apache Airflow for workflow orchestration, Apache Kafka running in KRaft mode for high-throughput event streaming, Apache Spark for real-time stream processing, and Apache Cassandra for scalable NoSQL storage. The entire ecosystem is containerized using Docker for seamless deployment and scalability.
+[cite_start]An end-to-end real-time data engineering pipeline that orchestrates data ingestion, processing, and distributed storage[cite: 20]. [cite_start]This architecture leverages Apache Airflow for workflow orchestration, Apache Kafka running in KRaft mode for high-throughput event streaming, Apache Spark for real-time stream processing, and Apache Cassandra for scalable NoSQL storage[cite: 20]. [cite_start]The entire ecosystem is containerized using Docker for seamless deployment and scalability[cite: 20].
 
 ---
 
@@ -11,6 +11,7 @@ An end-to-end real-time data engineering pipeline that orchestrates data ingesti
 ├── spark/                 # Spark Structured Streaming scripts
 ├── docker-compose.yml     # Multi-container Docker application configuration
 └── README.md
+
 
 ## System Architecture
 ![system Architecture](https://github.com/ahemd1/Streaming_pipeline/blob/main/System%20Architecture.png)
