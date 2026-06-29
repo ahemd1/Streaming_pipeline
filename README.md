@@ -4,6 +4,15 @@ An end-to-end real-time data engineering pipeline that orchestrates data ingesti
 
 ---
 
+```markdown
+## Project Structure
+
+```text
+├── dags/                  # Airflow DAGs for data ingestion
+├── spark/                 # Spark Structured Streaming scripts
+├── docker-compose.yml     # Multi-container Docker application configuration
+└── README.md
+
 ## System Architecture
 ![system Architecture](https://github.com/ahemd1/Streaming_pipeline/blob/main/System%20Architecture.png)
 
