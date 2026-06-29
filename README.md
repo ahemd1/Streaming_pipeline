@@ -5,7 +5,7 @@ An end-to-end real-time data engineering pipeline that orchestrates data ingesti
 ---
 
 ## System Architecture
-![system Architecture](https://github.com/ahemd1/Streaming_pipeline/blob/main/System%20Architecture.png)
+![system Architecture](System Architecture.png)
 
 The pipeline is engineered with a modern, decoupled architecture ensuring fault tolerance and high availability:
 
@@ -49,6 +49,6 @@ Ensure you have the following installed on your host machine:
 ### Installation & Deployment
 
 1. **Clone the repository:**
-   ```bash
-git clone https://github.com/ahemd1/Streaming_pipeline.git
-cd Streaming_pipeline
+```bash
+   git clone [https://github.com/ahemd1/Streaming_pipeline.git](https://github.com/ahemd1/Streaming_pipeline.git)
+   cd Streaming_pipeline
