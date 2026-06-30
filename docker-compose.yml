@@ -156,6 +156,10 @@ services:
     ports:
       - "9090:8080"
       - "7077:7077"
+    volumes:
+      - ./:/opt/spark/apps
+      - ./spark_ivy_cache:/tmp/cache
+      - ./checkpoints:/tmp/checkpoint
     networks:
       - confluent
 
@@ -165,6 +169,9 @@ services:
     command: /opt/spark/bin/spark-class org.apache.spark.deploy.worker.Worker spark://spark-master:7077
     depends_on:
       - spark-master
+    volumes:
+      - ./:/opt/spark/apps
+      - ./checkpoints:/tmp/checkpoint
     environment:
       SPARK_MODE: worker
       SPARK_WORKER_CORES: 2
