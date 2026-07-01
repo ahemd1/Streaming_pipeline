@@ -2,3 +2,6 @@
 __pycache__/
 *.pyc
 dags/__pycache__/
+checkpoints/
+spark_ivy_cache/
+
