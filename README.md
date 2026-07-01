@@ -52,3 +52,30 @@ Ensure you have the following installed on your host machine:
    ```bash
    git clone [https://github.com/ahemd1/Streaming_pipeline.git](https://github.com/ahemd1/Streaming_pipeline.git)
    cd Streaming_pipeline
+
+2. **Start the pipeline:**
+```bash
+   docker-compose up -d
+```
+3. **Trigger the Airflow DAG:**
+   - Open http://localhost:8080 (admin/admin)
+   - Enable and trigger `user_automation`
+
+4. **Run Spark Streaming:**
+```bash
+   docker exec spark-master /opt/spark/bin/spark-submit \
+     --master spark://spark-master:7077 \
+     --packages com.datastax.spark:spark-cassandra-connector_2.12:3.4.1,\
+   org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.0 \
+     /opt/spark/spark_stream.py
+```
+
+5. **Verify data in Cassandra:**
+```bash
+   docker exec -it cassandra cqlsh -u cassandra -p cassandra
+   SELECT count(*) FROM spark_streams.created_users;
+```
+
+## Known Limitations
+- `post_code` field stores as `null` due to field name mismatch between API response (`postal_code`) and Cassandra schema (`post_code`).
+- `cassandra-driver` Python package requires manual installation in the Spark container after each restart.
