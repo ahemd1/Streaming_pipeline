@@ -60,6 +60,7 @@ Ensure you have the following installed on your host machine:
 3. **Trigger the Airflow DAG:**
    - Open http://localhost:8080 (admin/admin)
    - Enable and trigger `user_automation`
+![Airflow_stream_data_from_API](https://github.com/ahemd1/Streaming_pipeline/blob/main/Images/Airfolow_stream_data_from_API.png)
 
 4. **Run Spark Streaming:**
 ```bash
@@ -69,12 +70,15 @@ Ensure you have the following installed on your host machine:
    org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.0 \
      /opt/spark/spark_stream.py
 ```
+![Spark_UI](https://github.com/ahemd1/Streaming_pipeline/blob/main/Images/Spark_UI.png)
 
 5. **Verify data in Cassandra:**
 ```bash
    docker exec -it cassandra cqlsh -u cassandra -p cassandra
    SELECT count(*) FROM spark_streams.created_users;
 ```
+![Cassandra_data](https://github.com/ahemd1/Streaming_pipeline/blob/main/Images/Cassandra_rows.png)
+
 
 ## Known Limitations
 - `post_code` field stores as `null` due to field name mismatch between API response (`postal_code`) and Cassandra schema (`post_code`).
